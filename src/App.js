@@ -9,6 +9,7 @@ import { Box } from "@mui/system";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import ComplaintForm from "./components/complaintForm";
 import { useState } from "react";
+import Daas from "./components/daas";
 
 function App() {
   const [logged, setLogged] = useState(false);
@@ -16,6 +17,9 @@ function App() {
   return (
     <div>
       <Switch>
+        <Route path="/daas">
+          <ResponsiveDrawer></ResponsiveDrawer>
+        </Route>
         <Route path="/booking">
           <ResponsiveDrawer></ResponsiveDrawer>
         </Route>

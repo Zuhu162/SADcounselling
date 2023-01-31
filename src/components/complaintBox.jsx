@@ -3,6 +3,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import sessions from "../assets/fakeData";
 import { Button, Typography } from "@mui/material";
 import palette from "./palette";
+import { Link } from "react-router-dom";
 
 const columns = [
   { field: "date", headerName: "Date", width: 300 },
@@ -25,12 +26,14 @@ export default function ComplaintBox() {
         checkboxSelection
         disableSelectionOnClick="true"
       />
-      <Button
-        sx={{ backgroundColor: palette.red, marginRight: "30px" }}
-        variant="contained"
-      >
-        Information
-      </Button>
+      <Link className="text=link" to="/daas">
+        <Button
+          sx={{ backgroundColor: palette.red, marginRight: "30px" }}
+          variant="contained"
+        >
+          Take DAAS Test
+        </Button>
+      </Link>
     </div>
   );
 }

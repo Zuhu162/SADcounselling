@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import palette from "./palette";
 
 export default function ComplaintForm() {
@@ -67,6 +68,11 @@ export default function ComplaintForm() {
     },
   ];
 
+  const submit = () => {
+    alert(
+      "Thank you for taking the test. Your response has been recorded and result will be sent in your email. Click ok to be redirected to dashboard"
+    );
+  };
   return (
     <div>
       <Box sx={{ padding: "60px" }}>
@@ -155,15 +161,15 @@ export default function ComplaintForm() {
               <Grid item xs={12}>
                 <TextField fullWidth multiline rows={4}></TextField>
               </Grid>
-              <Button
-                sx={{
-                  background: palette.red,
-                  color: "white",
-                  padding: "10px",
-                }}
-              >
-                Submit
-              </Button>
+              <Link to="/dashboard">
+                <Button
+                  onClick={() => submit()}
+                  sx={{ backgroundColor: palette.red }}
+                  variant="contained"
+                >
+                  Submit
+                </Button>
+              </Link>
             </Grid>
           </Grid>
         </Grid>

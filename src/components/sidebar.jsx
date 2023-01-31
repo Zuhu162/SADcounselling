@@ -28,6 +28,7 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import bigStar from "../assets/UTM.png";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import ComplaintForm from "./complaintForm";
+import Daas from "./daas";
 
 const drawerWidth = 240;
 
@@ -222,6 +223,9 @@ export default function PersistentDrawerLeft() {
         <Switch>
           <Route path="/booking">
             <ComplaintForm></ComplaintForm>
+          </Route>
+          <Route path="/daas">
+            <Daas></Daas>
           </Route>
           <Route path="/dashboard">
             <ComplaintBox></ComplaintBox>
