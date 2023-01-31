@@ -26,7 +26,7 @@ export default function StaffLogin() {
         <Box
           sx={{
             width: "60%",
-            height: "80vh",
+            height: "50vh",
             padding: "40px",
             backgroundColor: palette.grey,
             borderRadius: "20px",
