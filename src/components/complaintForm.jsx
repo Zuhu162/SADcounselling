@@ -70,7 +70,7 @@ export default function ComplaintForm() {
 
   const submit = () => {
     alert(
-      "Thank you for taking the test. Your response has been recorded and result will be sent in your email. Click ok to be redirected to dashboard"
+      "Your response has been recorded. Click ok to be redirected to dashboard"
     );
   };
   return (
