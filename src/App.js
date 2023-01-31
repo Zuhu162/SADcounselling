@@ -10,6 +10,10 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import ComplaintForm from "./components/complaintForm";
 import { useState } from "react";
 import Daas from "./components/daas";
+import StaffLogin from "./components/staffLogin";
+import StaffLoginPage from "./components/staffLoginPage";
+import Post from "./components/staffPost";
+import StaffSideBar from "./components/staffSidebar";
 
 function App() {
   const [logged, setLogged] = useState(false);
@@ -25,6 +29,12 @@ function App() {
         </Route>
         <Route path="/dashboard">
           <ResponsiveDrawer />
+        </Route>
+        <Route path="/post">
+          <StaffSideBar />
+        </Route>
+        <Route path="/staffLogin">
+          <StaffLoginPage />
         </Route>
         <Route path="/">
           <LoginPage />

@@ -1,6 +1,7 @@
-import { Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+import { Link } from "react-router-dom";
 import utmLogo from "../assets/UTM.png";
 import palette from "./palette";
 
@@ -29,6 +30,19 @@ const LoginSide = () => {
         <Typography sx={{ opacity: "70%" }} variant="p">
           Group 5
         </Typography>
+        <Box mt={3}>
+          <Link to="/staffLogin">
+            <Button
+              sx={{ backgroundColor: palette.red, mr: 2 }}
+              variant="contained"
+            >
+              Staff Login
+            </Button>
+          </Link>
+          <Link to="/">
+            <Button variant="contained">User Register</Button>
+          </Link>
+        </Box>
       </Box>
     </div>
   );
