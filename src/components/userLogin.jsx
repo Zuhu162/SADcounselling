@@ -8,7 +8,7 @@ import Checkbox from "@mui/material/Checkbox";
 import utm from "../assets/utmsm.png";
 import { Link } from "react-router-dom";
 
-export default function LoginForm() {
+export default function UserLogin() {
   const [email, setEmail] = useState("");
   const [passowrd, setPassword] = useState("");
 
@@ -26,7 +26,7 @@ export default function LoginForm() {
         <Box
           sx={{
             width: "60%",
-            height: "80vh",
+            height: "50vh",
             padding: "40px",
             backgroundColor: palette.grey,
             borderRadius: "20px",
@@ -42,7 +42,7 @@ export default function LoginForm() {
           <Grid container>
             <Grid item xs={6}>
               <Typography sx={{ color: palette.red }} variant="h5">
-                Sign Up
+                User Login
               </Typography>
             </Grid>
             <Grid item xs={6}>
@@ -63,7 +63,7 @@ export default function LoginForm() {
           <TextField
             onChange={(e) => setEmail(e.currentTarget.value)}
             sx={{ width: "80%" }}
-            label="Email"
+            label="User ID"
             variant="filled"
           />
           <TextField
@@ -74,17 +74,6 @@ export default function LoginForm() {
             type="password"
             autoComplete="current-password"
           />
-          <TextField
-            sx={{ width: "80%" }}
-            label="Phone Number"
-            variant="filled"
-          />
-          <TextField sx={{ width: "80%" }} label="Faculty" variant="filled" />
-          <TextField
-            sx={{ width: "80%" }}
-            label="Student ID"
-            variant="filled"
-          />
           <Box
             sx={{
               width: "80%",
@@ -94,37 +83,17 @@ export default function LoginForm() {
           >
             <FormControlLabel
               control={<Checkbox />}
-              label="Subscribe to our newsletter!"
+              label="Keep me logged in"
             />
           </Box>
           <Link to="/dashboard" className="text-link">
             <Button
-              onClick={() => console.log("hello")}
               sx={{ backgroundColor: palette.red, width: "80%" }}
               variant="contained"
             >
-              Register
+              Login
             </Button>
           </Link>
-          <Link className="text-link" to="/userLogin">
-            <Typography color="blue" mr={3}>
-              Already have an account? Click here to Login
-            </Typography>
-          </Link>
-          <Box
-            sx={{
-              display: { sm: "none", xs: "block" },
-              width: "100%",
-              justifyContent: "center",
-            }}
-            mt={3}
-          >
-            <Link className="text-link" to="/staffLogin">
-              <Typography color="blue" mr={3}>
-                Staff Login
-              </Typography>
-            </Link>
-          </Box>
         </Box>
       </Box>
     </div>

@@ -14,6 +14,8 @@ import StaffLogin from "./components/staffLogin";
 import StaffLoginPage from "./components/staffLoginPage";
 import Post from "./components/staffPost";
 import StaffSideBar from "./components/staffSidebar";
+import UserLogin from "./components/userLogin";
+import UserLoginPage from "./components/userLoginPage";
 
 function App() {
   const [logged, setLogged] = useState(false);
@@ -32,6 +34,9 @@ function App() {
         </Route>
         <Route path="/post">
           <StaffSideBar />
+        </Route>
+        <Route path="/userLogin">
+          <UserLoginPage />
         </Route>
         <Route path="/staffLogin">
           <StaffLoginPage />
