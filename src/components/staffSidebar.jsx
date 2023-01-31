@@ -208,6 +208,29 @@ export default function StaffSideBar() {
           </Link>
         </List>
         <Divider />
+        <Box
+          sx={{
+            height: "100vh",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-end",
+            color: palette.red,
+          }}
+        >
+          <Typography variant="button">Group 5</Typography>
+          <Typography variant="caption">
+            1. Zuhayer Adnan Siddique (A21EC3055)
+          </Typography>
+          <Typography variant="caption">
+            2. Kagineswaran A/L Tamil Vanan (A21EC0035)
+          </Typography>
+          <Typography variant="caption">
+            3. Chai Ming Jing (A21EM0030)
+          </Typography>
+          <Typography variant="caption">
+            4. Khairul Azhar Bin Zuhry (A20EC3001)
+          </Typography>
+        </Box>
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
