@@ -186,7 +186,7 @@ export default function StaffSideBar() {
         </DrawerHeader>
         <Divider />
         <List>
-          <Link to="/createPost" className="text-link">
+          <Link to="/post" className="text-link">
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>

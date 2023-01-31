@@ -106,6 +106,20 @@ export default function LoginForm() {
               Register
             </Button>
           </Link>
+          <Box
+            sx={{
+              display: { sm: "none", xs: "block" },
+              width: "100%",
+              justifyContent: "center",
+            }}
+            mt={3}
+          >
+            <Link className="text-link" to="/staffLogin">
+              <Typography color="blue" mr={3}>
+                Staff Login
+              </Typography>
+            </Link>
+          </Box>
         </Box>
       </Box>
     </div>
